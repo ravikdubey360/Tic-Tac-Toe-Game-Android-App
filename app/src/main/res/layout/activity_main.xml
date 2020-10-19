@@ -42,17 +42,15 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
     
-    <Button
+    <ImageButton
         android:id="@+id/resetButton_id"
         android:layout_margin="20dp"
         android:layout_gravity="center_horizontal"
         android:background="#434343"
         android:scaleType="fitXY"
-        android:layout_width="wrap_content"
-        android:text="Refresh"
-        android:textStyle="bold"
-        android:textColor="#fff"
-        android:layout_height="wrap_content" />
+        android:src="@drawable/reset"
+        android:layout_width="80dp"
+        android:layout_height="77dp" />
 
     <LinearLayout
         android:layout_weight="1"
