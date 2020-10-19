@@ -2,13 +2,14 @@ package com.example.tictactoe;
 
 import android.graphics.Color;
 import android.os.PersistableBundle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         textViewPlayer1.setBackgroundColor(Color.rgb(220,20,60));
 
-        ImageButton resetButton = findViewById(R.id.resetButton_id);
+        Button resetButton = findViewById(R.id.resetButton_id);
 
         for(int i = 0; i < 3; i++){
             for (int j = 0; j < 3; j++){
