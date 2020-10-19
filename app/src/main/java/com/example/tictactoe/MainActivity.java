@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         textViewPlayer1.setBackgroundColor(Color.rgb(220,20,60));
 
-        Button resetButton = findViewById(R.id.resetButton_id);
+        ImageButton resetButton = findViewById(R.id.resetButton_id);
 
         for(int i = 0; i < 3; i++){
             for (int j = 0; j < 3; j++){
