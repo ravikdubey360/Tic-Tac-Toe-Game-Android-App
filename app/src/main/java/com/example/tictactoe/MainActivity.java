@@ -1,8 +1,13 @@
 package com.example.tictactoe;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.PersistableBundle;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -216,5 +221,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             textViewPlayer1.setBackgroundColor(Color.rgb(220,20,60));
             textViewPlayer2.setBackgroundColor(Color.rgb(58,133,0));
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.option_menu, menu);
+        return  true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.share:
+                try{
+                    Intent i = new Intent(Intent.ACTION_SEND);
+                    i.setType("text/plain");
+                    i.putExtra(Intent.EXTRA_SUBJECT, " ");
+                    i.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.example.tictactoe");
+                    startActivity(Intent.createChooser(i, "Share with "));
+                }catch (Exception e){
+                    Toast.makeText(this, "Hmm.. Sorry, \nCannot be share", Toast.LENGTH_SHORT).show();
+                }
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
